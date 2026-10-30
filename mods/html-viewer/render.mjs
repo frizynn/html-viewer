@@ -284,7 +284,7 @@ async function serve() {
             const target = el.matches("code") && el.parentElement?.matches("pre") ? el.parentElement : el;
             const text = el.textContent;
             target.textContent = "";
-            try { pele.mount(target, text); } catch (e) { target.textContent = "Mermaid: " + e.message; }
+            try { pele.mount(target, text, { zoom: false }); } catch (e) { target.textContent = "Mermaid: " + e.message; }
           }
         })()`);
       }
