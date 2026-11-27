@@ -1,1 +1,1 @@
-{ "place": "none", "title": "html-viewer" }
+{ "place": "none", "title": "html-viewer", "link_handlers": [{ "kind": "file", "pattern": "(?i)\\.(html?|md|markdown|mdown)$" }] }
