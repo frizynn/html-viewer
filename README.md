@@ -26,6 +26,8 @@ herdr-app do tab.new '{"mod":"html-viewer","props":{"space":"<space id>","file":
 
 `space` tells the viewer which machine to use (a remote space's id starts with its machine's name); without it, it uses the space shown when the tab first appears. Without `file` it lists the space's `.html` and `.md` files.
 
+Cmd-click (Ctrl-click) an `.html` or `.md` path or `file://` link in a terminal, local or on another machine, and it opens in a viewer tab of that terminal's space, read on the terminal's machine. Herdr adds the mod to a personal layout's `link_handlers` the first time that layout sees its link rule, so this works while a layout of your own is shown, not Herdr's `main`.
+
 Needs Node 22 or newer and Chrome (or Chromium, or a Playwright headless shell; `HTML_CHROME` picks one) on each machine that has files to show. It runs `node` and Chrome there (on Linux with systemd, as a `systemd-run --user` unit), reads the files you open, and downloads marked and pele from jsDelivr once.
 
 `RECIPE.md` is the brief to rebuild it from scratch.
